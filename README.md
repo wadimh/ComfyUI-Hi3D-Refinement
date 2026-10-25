@@ -1,4 +1,4 @@
-# ComfyUI-Hi3D (Sparc3D Refinement)
+# ComfyUI-Hi3D-Refinement / Unofficial
 
 [![Hugging Face](https://img.shields.io/badge/%F0%9F%A4%97%20Hugging%20Face-Hi3Dv1.0-blue)](https://huggingface.co/hi3d-official/Hi3Dv1.0)
 [![Official Website](https://img.shields.io/badge/Website-hi3d.ai-success)](http://hi3d.ai/)
@@ -6,13 +6,27 @@
 [![License: Apache 2.0](https://img.shields.io/badge/License-Apache_2.0-yellow.svg)](LICENSE)
 [![License: Hi3D 1.0](https://img.shields.io/badge/License-Hi3D_Open_1.0-lightgrey.svg)](LICENSE-HI3D)
 
-A ComfyUI custom node that brings **[Hi3Dv1.0](https://huggingface.co/hi3d-official/Hi3Dv1.0)** high-resolution 3D geometry refinement into ComfyUI. 
+A ComfyUI unofficial custom node that brings **[Hi3Dv1.0](https://huggingface.co/hi3d-official/Hi3Dv1.0)** high-resolution 3D geometry refinement into ComfyUI. 
 
 It takes a coarse 3D mesh (e.g., from **TRELLIS**, **Hunyuan3D**, or any 3D generator) + a reference image and carves out fine surface details, sharp bevels, relief, and micro-geometry at up to **1536³** sparse lattice resolution.
 
 * 🌐 **Hugging Face Model Page:** [huggingface.co/hi3d-official/Hi3Dv1.0](https://huggingface.co/hi3d-official/Hi3Dv1.0)
 * 🏠 **Project Homepage:** [hi3d.ai](http://hi3d.ai/)
 * 📄 **Technical Report (Sparc3D):** [arxiv.org/abs/2505.14521](https://arxiv.org/abs/2505.14521)
+
+---
+
+## 🖼️ Refinement Example
+
+| Input Image | Coarse Mesh (TRELLIS.2) | Refined Mesh (Hi3D Refinement) |
+| :---: | :---: | :---: |
+| <img src="resources/viking_wolf_rune_axe.png" width="260" alt="Input Reference Image"> | <img src="resources/coarse.png" width="260" alt="Coarse Mesh"> | <img src="resources/refined.png" width="260" alt="Refined Mesh"> |
+| *Input Reference Image* | *Initial Coarse Mesh* | *Refined Geometry (1536³)* |
+
+> **Parameters used for this example:**
+> * **Resolution:** `1536`
+> * **Inference Steps:** `24` steps for all stages (`steps_512: 24`, `steps_1024: 24`, `steps_1536: 24`).
+> * Notice the sharp blade bevels, carved rune reliefs, and handle wrappings carved into the geometry.
 
 ---
 
@@ -61,6 +75,10 @@ Download the weights from the official [Hi3Dv1.0 Hugging Face repository](https:
 ---
 
 ## 🚀 Node Overview & Usage
+
+<p align="center">
+  <img src="resources/node.png" width="600" alt="Hi3D Refine Mesh Node">
+</p>
 
 Find the node under `Hi3D` $\rightarrow$ **`Hi3D Refine Mesh (Sparc3D)`**.
 
