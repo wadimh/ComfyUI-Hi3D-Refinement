@@ -1,0 +1,6 @@
+{
+  "_class_name": "FlowMatchHeunScheduler",
+  "num_inference_steps": 25,
+  "sigma_min": 0.002,
+  "time_rescale_factor": 2.0
+}

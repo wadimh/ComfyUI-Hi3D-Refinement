@@ -1,0 +1,9 @@
+{
+  "model": {
+    "type": "SparconvVAE",
+    "decoder_cfg": {
+      "type": "PTv3MeshDecoder",
+      "z_channels": 32
+    }
+  }
+}

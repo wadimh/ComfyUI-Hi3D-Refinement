@@ -1,0 +1,9 @@
+{
+  "_class_name": "Sparc3DPipeline",
+  "_format_version": "1.0",
+  "_sparc3d_version": "0.1.0",
+  "scheduler": "scheduler",
+  "vae": "vae",
+  "transformer_512": "transformer_512",
+  "transformer_1024": "transformer_1024"
+}
